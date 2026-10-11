@@ -1,3 +1,5 @@
+import numpy as np
+
 raw_students = [
     "zg0505_짱구",
     "cs0822_철수",
