@@ -1,1 +1,1 @@
-# Analyze student scores using python and NumPy.
+#  Nomalization & Analyze student scores using python and NumPy.
