@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 # 일반 .py 환경에서 이미지 불러오기 (프로젝트 루트에서 실행하는 파일)
-image_path = Path(__file__).resolve().parent / "src" / "images" / "basketball.jpg"
+image_path = Path(__file__).resolve().parent.parent / "src" / "images" / "basketball.jpg"
 if not image_path.is_file():
     raise FileNotFoundError(f"이미지를 찾을 수 없습니다: {image_path}")
 
