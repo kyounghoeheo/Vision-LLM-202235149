@@ -16,7 +16,7 @@ TEMP_JSON_PATH = DATA_DIR / "vision_data_tmp.json"
 RECORD_PATH = DATA_DIR / "lost_items.json"
 TEMP_RECORD_PATH = DATA_DIR / "lost_items_tmp.json"
 
-ENGINE_PATH = ROOT_DIR / "src/models/YOLO/yolo11n_int8.engine"
+ENGINE_PATH = ROOT_DIR / "src/models/YOLO/yolo11n.pt"
 PT_PATH = ROOT_DIR / "src/models/YOLO/yolo11n.pt"
 YOLO_MODEL_PATH = (
     str(ENGINE_PATH) if os.name != "nt" and ENGINE_PATH.is_file()
@@ -60,7 +60,7 @@ def main():
     records = load_records()
 
     yolo = YOLO(YOLO_MODEL_PATH)
-    cap = cv2.VideoCapture(CAMERA_ID)
+    cap = cv2.VideoCapture(CAMERA_ID, cv2.CAP_V4L2)
 
     if not cap.isOpened():
         print("카메라를 열 수 없습니다. CAMERA_ID를 확인하세요.")

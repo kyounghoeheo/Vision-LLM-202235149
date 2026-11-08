@@ -14,7 +14,7 @@ GEMMA_MODEL_PATH = ROOT_DIR / "src/models/Gemma4/google_gemma-4-E2B-it-Q4_K_M.gg
 CONTEXT_WINDOW = 2048
 MAX_TOKENS = 150
 
-MIC_DEVICE = "plughw:3,0"  # Jetson에서 'arecord -l'로 마이크 번호 확인
+MIC_DEVICE = "plughw:2,0"  # Jetson에서 'arecord -l'로 마이크 번호 확인
 AUDIO_FILE = PROJECT_DIR / "data/input.wav"
 WHISPER_PATH = ROOT_DIR / "whisper.cpp/build-cpu/bin/whisper-cli"
 WHISPER_MODEL = ROOT_DIR / "whisper.cpp/models/ggml-base.bin"
